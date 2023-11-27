@@ -1,7 +1,7 @@
 \ProvidesClass{classes/report_jarticle}[2021/02/16 report]
 
 \RequirePackage{plautopatch}
-\LoadClass[a4paper, 11pt, uplatex, dvipdfmx]{jarticle}
+\LoadClass[a4paper, two column, uplatex, dvipdfmx]{ujarticle}
 \plautopatchdisable{eso-pic}
 
 \usepackage{subfiles}

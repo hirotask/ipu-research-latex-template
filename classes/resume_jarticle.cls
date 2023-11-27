@@ -1,7 +1,7 @@
 \ProvidesClass{classes/resume_jarticle}[2020/02/27 resume]
 
 \RequirePackage{plautopatch}
-\LoadClass[a4paper, two column, 9pt, uplatex, dvipdfmx]{jarticle}	%A4, 2段, 字の大きさ
+\LoadClass[a4paper, two column, 9pt, uplatex, dvipdfmx]{ujarticle}	%A4, 2段, 字の大きさ
 \plautopatchdisable{eso-pic}
 
 \pagestyle{empty}	%ページ数
