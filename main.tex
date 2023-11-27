@@ -1,81 +1,14 @@
-\documentclass[twocolumn,a4paper,uplatex,dvipdfmx]{jarticle}
-\usepackage{styles/abstract}
-%%\usepackage{graphicx}
-\title{Latexによる要旨作成のガイド}
-\etitle{How to Typeset Your Abstract in Latex}
-\author{県立 太郎}
-\lab{}
-\studentid{0311998250}
-\teacher{
-\name{盛岡次郎}
-\and
-\name{滝沢花子}
-}
-\begin{document}
-\maketitle
-\section{はじめに}
-本稿は，岩手県立大学ソフトウエア情報学部の卒業論文要旨スタイルファイルをLatex\cite{bibunsho}で作成する
-ためのガイドである．Latexで作成するために，教務委員会からスタイルファイルとサンプルtexファイルを含む
-「Latex要旨作成セット」を提供するので，必要があれば利用してほしい．
-\section{作成のガイド}
-\subsection{手順}
-まず、教務委員会のホームページから，
-「Latex要旨作成セット」をダウンロードする．UNIX版（tar.gz）とWindows版（lzh）があるので
-自分が利用するプラットフォームを選択すること．
-セットの中身は，スタイルファイル（abstract.sty）とサンプルファイル（sample.tex）と
-DVIファイル（sample.dvi）から構成されている．サンプルファイルをそのまま編集して要旨を作成すれば効率がよい．
-\subsection{スタイルファイルの使い方}
-\begin{verbatim}
-　提供するスタイルファイルは，ドキュメントクラスのjarticleを利用しているので，次のように宣言すること．
-\documentclass{jarticle}
-\usepackage{abstract}
-タイトルには、以下の内容を記述する．
-\title{日本語の表題}
-\etitle{英語の表題}
-\author{著者}
-\lab{講座}
-\studentid{学籍番号（半角）}
-\teacher{
-\name{指導教員}
-}
-\begin{document}
-\maketitile
-　・・・本文・・・
-指導教員が複数の場合は、\teacherの中に以下のように\andをはさんで\nameを追加すればよい。
-\teacher{
-\name{指導教員}
-\and
-\name{指導教員2}
-・・・
-}
-本文は、基本的に節で区切ること．節の区切りは下記の３つを用いる．
-\section{節}
-・・・
-\subsection{小節}
-・・・
-\subsection{少々節}
-・・・
-参考文献については，例えばthebibliography環境を用いて，
-\begin{thebibliography}{9}
-\bibitem{参照名}
-文献１
-\bibitem{参照名２}
-文献２・・・・
-\end{thebibliography}
-と記述する．また，本文中には、\cite{参照名}で引用個所を示す．
-\end{verbatim}
+\documentclass{classes/report}
 
-\section{おわりに}
-本稿は，論文要旨用スタイルファイルの使い方のガイドであると同時に，要旨のサンプルともなっているが，
-実際の要旨の枚数は２枚であるので注意のこと．
-要旨の書式については，教務委員会のホームページに提示しているので，参照しておくこと.
+\begin{document}
 
-\begin{thebibliography}{9}
-\bibitem{bibunsho}
-奥村晴彦: {\LaTeXe} 美文書作成入門, 技術評論社 (1997).
-\bibitem{latex}
-Lamport, L.: {\em A Document Preparation System {\LaTeX} User's Guide \&
-  Reference Manual\/}, Addison Wesley, Reading, Massachusetts (1986).
-\end{thebibliography}
+\subfile{sections/title}
+\newpage
+
+\tableofcontents
+\clearpage
+
+\subfile{sections/abstract}
+\newpage
 
 \end{document}
