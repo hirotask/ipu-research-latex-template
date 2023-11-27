@@ -1,5 +1,6 @@
 \ProvidesClass{classes/report_jarticle}[2021/02/16 report]
 
+\NeedsTeXFormat{pLaTeX2e}
 \RequirePackage{plautopatch}
 \LoadClass[a4paper, 11pt, uplatex, dvipdfmx]{jarticle}
 \plautopatchdisable{eso-pic}

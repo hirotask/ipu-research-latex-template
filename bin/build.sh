@@ -4,4 +4,4 @@ if [ ! -z "$GITHUB_ACTIONS" ]; then
     cp /.latexmkrc $HOME/
 fi
 
-latexmk main.tex
+latexm main.tex
